@@ -1,0 +1,19 @@
+service: summarization
+
+frameworkVersion: "3"
+
+provider:
+  name: aws # provider
+  region: ap-south-1 # aws region
+  memorySize: 3000 # optional, in MB, default is 1024
+  timeout: 300 # optional, in seconds, default is 6
+
+functions:
+  summarization:
+    image: 589618749893.dkr.ecr.ap-south-1.amazonaws.com/saar_summarizer:latest #ecr url
+    events:
+      - http:
+          path: summarize # http path
+          method: post # http method
+
+

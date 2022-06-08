@@ -1,0 +1,7 @@
+pillow
+transformers==4.19.2
+numpy==1.22.4
+pandas==1.4.2
+spacy==3.3.0
+rake-spacy==0.3.1
+tensorflow==2.9.1
